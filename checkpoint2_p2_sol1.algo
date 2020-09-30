@@ -1,0 +1,33 @@
+ALGORITHM checkpoint2_p2_sol1_algo
+
+VAR
+
+set1 : ARRAY_OF INTEGER [4];
+set2 : ARRAY_OF INTEGER [5];
+i,J, sum : INTEGER := 0 ;
+
+BEGIN
+write ("insert the element of set1")
+read (set 1)
+write ("insert the element of set2")
+read (set 2)
+
+FOR i FROM 0 TO length.set1-1 STEP step  DO
+FOR j FROM 0 TO length.set2-1 STEP step  DO
+
+    IF (set1[i]==set2[j]) THEN
+       sum1 += set1[i]
+        
+        ELSE
+
+        (set2[j]==set1[i]) THEN
+        sum2 += set2[j]
+
+    END_IF
+END_FOR
+END_FOR
+
+sum:= sum1 + sum2
+write (sum)
+
+END
